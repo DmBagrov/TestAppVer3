@@ -18,7 +18,6 @@
 
 -(void)reloadCells
 {
-    //NSLog(@"i redisplay data");
     [self.tableView reloadData];
 }
 

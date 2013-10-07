@@ -10,13 +10,13 @@
 
 @interface TAShot : NSObject
 {
-    NSString *shotName_;
-    UIImage *shotImage_;
+    //NSString *shotName_;
+    //UIImage *shotImage_;
 }
 
 @property(retain) NSString* shotName;
 @property(retain) UIImage* shotImage;
-@property  BOOL isFavorite;
+@property BOOL isFavorite;
 
 -(id) initShotWithName:(NSString*)shotInitName andImage:(UIImage*)shotInitImage;
 

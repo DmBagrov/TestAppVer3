@@ -16,9 +16,8 @@
 {
     if(self = [super init])
     {
-        //rework!!!!
-        shotName = [shotInitName copy];
-        shotImage = shotInitImage;
+        shotName = [[NSString alloc] initWithString:shotInitName];
+        shotImage = [[UIImage alloc] initWithCGImage:shotImage.CGImage];
         isFavorite = NO;
     }
     
@@ -27,8 +26,9 @@
 
 -(void)reloadImage:(UIImage *)newImage
 {
-    //rework!!!
-    shotImage = [newImage retain];
+    //release old image
+    [shotImage release];
+    shotImage = [[UIImage alloc] initWithCGImage:newImage.CGImage];;
 }
 
 -(void)dealloc

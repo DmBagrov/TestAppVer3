@@ -39,10 +39,8 @@
     
     for(int i=0; i < imageCount; i++){
         
-        NSString *newImageName = [NSString stringWithFormat:@"foto%d.png",i];
-        
         TAShot *newShot = [[TAShot alloc]
-                            initShotWithName:newImageName
+                            initShotWithName:[NSString stringWithFormat:@"foto%d.png",i]
                             andImage:[self loadingImage]];
             
         [cacheForShots_ addObject:newShot];
